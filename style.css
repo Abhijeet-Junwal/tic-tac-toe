@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #272727;
+    align-items: center;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: #272727;
+}
+
+h1{
+    margin-top: 30px;
+    color: #87BBA2;
+    font-size: 3rem;
+    text-shadow: #000;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3vmin;
+    border-radius: 15px;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 15px;
+    background-color: #D4aa7d;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    font-size: 8vmin;
+    color: #000;
+}
+
+.box:hover{
+    background: #846a4f;
+}
+
+#reset-btn{
+    padding: 0.8rem;
+    background-color: #637b65;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    border-radius: 10px;
+}    
+
+#new-game{
+    padding: 1rem;
+    background-color: #D4aa7d;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* #msg{
+    color: #ffffff;
+    font-size: 3rem;    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+} */
+
+#msg {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.msg-container {
+    position: absolute;
+    background-color: #3a4740;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.8);
+    padding: 2.5rem 3rem;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 2;
+
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+    transition: all 0.4s ease;
+}
+
+
+@keyframes scaleIn {
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hide {
+    pointer-events: none;
+}
+
+
+.blur{
+    filter: blur(20px);
+}
+
+    
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
